@@ -1,1 +1,3 @@
 # Inventory-Management
+
+This project is a simple log system to keep track on all items within the company storage for clients. As this is a first experience with Mongodb Atlas with Nodejs and Express there are bound to be a few methods used that can be improved on. This is my attempt at gaining experience in areas that are highly used. This project is planned to be improved apon over time after core structure is developed. If any questions or concerns arise please reach out to me. - Joshua S.

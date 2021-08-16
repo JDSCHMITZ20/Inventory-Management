@@ -1,3 +1,6 @@
+// old file
+
+
 const express = require("express");
 
 const itemModel = require("../models/item");
@@ -15,23 +18,29 @@ app.get("/item", async (request, response) => {
 });
 
 
+function postItem() {
 // add item
 app.post("/", async (request, response) => {
     //const item = new itemModel(request.body); used to test
     let item = new itemModel({
-        Name: req.body.name,
-        Price: req.body.price,
-        Date: req.body.date
+        // Name: req.body.name,
+        // Price: req.body.price,
+        // Date: req.body.date
+
+        Nem: itemForm.item-name.value,
+        Vender: itemForm.item-vender.value,
+        sku: itemForm.item-sku.value
     })
     try {
       await item.save();
       response.send(item);
-      res.redirect('./pages/selection.html');
+      // res.redirect('./pages/selection.html');
     } catch (error) {
       response.status(500).send(error);
     }
 
   });
+}
 
 
 // update item

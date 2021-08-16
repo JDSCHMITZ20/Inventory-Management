@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Authors: Joshua Schmitz -->
+
 <head>
     <title>TechTeam</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="./basic.js"></script>
-
+    <link rel="icon" href="../images/tabbarlogo.png" type="image/gif">
+    <script src="../script/table.js"></script>
 </head>
 
 <body class="background">
 
     <div class="login">
-        <a href="selection.html"><img src="../images/logo.jpg"/></a>
-
-        <p></p>
-        <div>
-
-        <button class="btn btn-primary button" onclick=currentStock()>
-            Current Stock
-        </button><br>
-    
-        <button class="btn btn-primary button" onclick=oldStock()> 
-            Sold Stock
-        </button><br>
+        <a href="selection.html"><img src="../images/logo.jpg" /></a>
+        
+        <div style="margin-top: 50px; margin-left: 250px; margin-right: 250px;">
+            <button class="btn btn-primary button" onclick="openForm()">+ Add</button>
+            <button class="btn btn-primary button" onclick="loadTable()">Load Table</button><br><br>
+            <input type="text" id="search" placeholder="Search data here....."></input>
+            <div id="tableDiv" style="margin-top: 40px">
+                <!-- table gets added here -->
+            </div>
         </div>
+    </div>
+
+    
+    <!-- used to enter new items -->
+    <div class="form-popup" id="itemForm">
+        <form class="form-container">
+            <h1>Add Item</h1>
+
+            <label for="email"><b>Name</b></label>
+            <input type="text" id="item-name" placeholder="ex: Switch" required>
+
+            <label for="psw"><b>Vender#</b></label>
+            <input type="text" id="item-vender" placeholder="number written on box" required>
+
+            <label for="psw"><b>SKU</b></label>
+            <input type="text" id="item-sku" placeholder="SKU" required>
+
+
+            <button type="submit" class="btn" onclick="postItem()">Send to Database</button>
+            <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
     </div>
 
 
 
-   <footer class="container-fluid text-center disclaimer">
+    <footer class="container-fluid text-center disclaimer">
         <p>&copy TechTeam</p>
         <p>Created by JDSCHMITZ20</p>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

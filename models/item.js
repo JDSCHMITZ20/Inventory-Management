@@ -10,14 +10,14 @@ const ItemSchema = new mongoose.Schema({
     trim: true,
     lowercase: true,
   },
-  price: {
+  vender_number: {
     type: Number,
     default: 0,
     validate(value) {
-      if (value < 0) throw new Error("Negative prices aren't real.");
+      if (value < 0) throw new Error("Negative errot");
     },
   },
-  date: {
+  sku: {
     type: String,
     required: true,
   },
