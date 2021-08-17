@@ -1,6 +1,3 @@
-// fix the schema later
-
-
 const mongoose = require("mongoose");
 
 const ItemSchema = new mongoose.Schema({

@@ -1,5 +1,3 @@
-// old file
-
 
 const express = require("express");
 
@@ -17,17 +15,11 @@ app.get("/item", async (request, response) => {
   }
 });
 
-
-function postItem() {
 // add item
 app.post("/", async (request, response) => {
     //const item = new itemModel(request.body); used to test
     let item = new itemModel({
-        // Name: req.body.name,
-        // Price: req.body.price,
-        // Date: req.body.date
-
-        Nem: itemForm.item-name.value,
+        Name: itemForm.item-name.value,
         Vender: itemForm.item-vender.value,
         sku: itemForm.item-sku.value
     })
@@ -40,7 +32,7 @@ app.post("/", async (request, response) => {
     }
 
   });
-}
+
 
 
 // update item
@@ -69,8 +61,3 @@ app.delete("/item/:id", async (request, response) => {
   
 
 module.exports = app;
-
-
-
-
-
