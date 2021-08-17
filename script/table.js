@@ -4,8 +4,6 @@ const itemModel = require("../models/item");
 const app = express();
 
 
-
-
 function openForm() {
     document.getElementById("itemForm").style.display = "block";
 }
@@ -16,6 +14,8 @@ function closeForm() {
 
 //JSON Object................
 var json_obj = {
+
+    // test json
     // "cars": [
     //     { "name": "Ford", "models": ["Fiesta", "Focus", "Mustang"], "date": ["02/23/2021","02/23/2021","02/23/2021"] },
     //     { "name": "BMW", "models": ["320", "X3", "X5"], "date": ["02/23/2021","02/23/2021","02/23/2021"] },
@@ -90,23 +90,19 @@ function postItem() {
     app.post("/", async (request, response) => {
         //const item = new itemModel(request.body); used to test
         let item = new itemModel({
-            // Name: req.body.name,
-            // Price: req.body.price,
-            // Date: req.body.date
-
-            Nem: itemForm.item - name.value,
+            Name: itemForm.item - name.value,
             Vender: itemForm.item - vender.value,
             sku: itemForm.item - sku.value
         })
         try {
             await item.save();
             response.send(item);
-            // res.redirect('./pages/selection.html');
         } catch (error) {
             response.status(500).send(error);
         }
 
     });
+    closeForm();
 }
 
 module.exports = app;

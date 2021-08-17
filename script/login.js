@@ -9,7 +9,7 @@ loginButton.addEventListener("click", (e) => {
 
     if (username === "ttcorp" && password === "JS") {
         alert("You have successfully logged in.");
-        window.location = "./pages/selection.html"
+        window.location = "./pages/summary.html"
     } else {
         loginErrorMsg.style.opacity = 1;
     }
