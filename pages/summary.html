@@ -44,17 +44,11 @@
     <!-- used to enter new items -->
     <div class="form-popup" id="itemForm">
         <form class="form-container">
-            <h1>Add Item</h1>
+            <h1 style=text-align:center>Add Item</h1>
 
-            <label for="email"><b>Name</b></label>
-            <input type="text" id="item-name" placeholder="ex: Switch" required>
-
-            <label for="psw"><b>Vender#</b></label>
-            <input type="text" id="item-vender" placeholder="number written on box" required>
-
-            <label for="psw"><b>SKU</b></label>
+            <input type="text" id="item-name" placeholder="Item Name" required>
+            <input type="text" id="item-vender" placeholder="Vender Number" required>
             <input type="text" id="item-sku" placeholder="SKU" required>
-
 
             <button type="submit" class="btn" onclick="postItem()">Send to Database</button>
             <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>

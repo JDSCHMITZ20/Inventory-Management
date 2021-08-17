@@ -120,7 +120,7 @@ a:link, a:visited {
 
 /* Add styles to the form container */
 .form-container {
-  min-width: 400px;
+  min-width: 300px;
   padding: 10px;
   background-color: white;
 }
@@ -142,7 +142,7 @@ a:link, a:visited {
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #04AA6D;
+  background-color: rgb(42, 190, 42);
   color: white;
   padding: 16px 20px;
   border: none;
@@ -154,7 +154,7 @@ a:link, a:visited {
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+  background-color: rgb(133, 0, 0);
 }
 
 /* Add some hover effects to buttons */
